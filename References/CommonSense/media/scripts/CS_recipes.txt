@@ -1,0 +1,561 @@
+module Base
+{
+	/************************ EMPTY STUFF ************************/
+
+    recipe Empty-Bag
+    {
+       ConcretePowder/PlasterPowder,
+
+       Result:EmptyConcreteBag,
+	    Sound:PutItemInBag,
+       Time:100.0,
+    }
+
+    recipe Empty-Sack
+    {
+      destroy Dirtbag/Gravelbag/Sandbag=1,
+
+       Result:EmptySandbag,
+	    Sound:PutItemInBag,
+       Time:100.0,
+    }
+
+	/************************ OPEN CANNED ITEMS ************************/
+
+   recipe Open Dog Food
+    {
+       Dogfood,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:DogfoodOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+   recipe Open Condensed Milk
+    {
+       CannedMilk,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedMilkOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+	recipe Open Canned Soup
+    {
+       TinnedSoup,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:TinnedSoupOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Fruit Cocktail
+    {
+       CannedFruitCocktail,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedFruitCocktailOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Peaches
+    {
+       CannedPeaches,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedPeachesOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Pineapple
+    {
+       CannedPineapple,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedPineappleOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Beans
+	{
+	   TinnedBeans,
+	   keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+	   Result:OpenBeans,
+	   Time:80.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+	}
+
+    recipe Open Canned Corn
+    {
+       CannedCorn,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedCornOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Bolognese
+    {
+       CannedBolognese,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedBologneseOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Chili
+    {
+       CannedChili,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedChiliOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Mushroom Soup
+    {
+       CannedMushroomSoup,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedMushroomSoupOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Peas
+    {
+       CannedPeas,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedPeasOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Potato
+    {
+       CannedPotato2,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedPotatoOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Tomato
+    {
+       CannedTomato2,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedTomatoOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+    recipe Open Canned Carrots
+    {
+       CannedCarrots2,
+       keep [Recipe.GetItemTypes.CanOpener]/[Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.Screwdriver]/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+       Result:CannedCarrotsOpen,
+       Time:80.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Sound:OpenCannedFood,
+       Override:true
+    }
+
+	/************************ CREATE STUFF ************************/
+
+    recipe Create Spear
+    {
+        Plank/TreeBranch/Mop/Broom,
+        keep [Recipe.GetItemTypes.SharpKnife]/SharpedStone/MeatCleaver,
+
+        Result:SpearCrafted,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.CreateSpear,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+        Override:true
+    }
+
+   /************************ SPEAR ATTACHMENTS ************************/
+
+    recipe Attach Bread Knife to Spear
+    {
+        SpearCrafted,
+        BreadKnife,
+        DuctTape=2,
+
+        Result:SpearBreadKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Butter Knife to Spear
+    {
+        SpearCrafted,
+        ButterKnife,
+        DuctTape=2,
+
+        Result:SpearButterKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Fork to Spear
+    {
+        SpearCrafted,
+        Fork,
+        DuctTape=2,
+
+        Result:SpearFork,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Letter Opener to Spear
+    {
+        SpearCrafted,
+        LetterOpener,
+        DuctTape=2,
+
+        Result:SpearLetterOpener,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Scalpel to Spear
+    {
+        SpearCrafted,
+        Scalpel,
+        DuctTape=2,
+
+        Result:SpearScalpel,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Spoon to Spear
+    {
+        SpearCrafted,
+        Spoon,
+        DuctTape=2,
+
+        Result:SpearSpoon,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Scissors to Spear
+    {
+        SpearCrafted,
+        Scissors,
+        DuctTape=2,
+
+        Result:SpearScissors,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Hand Fork to Spear
+    {
+        SpearCrafted,
+        HandFork,
+        DuctTape=2,
+
+        Result:SpearHandFork,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Screwdriver to Spear
+    {
+        SpearCrafted,
+        Screwdriver,
+        DuctTape=2,
+
+        Result:SpearScrewdriver,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Kitchen Knife to Spear
+    {
+        SpearCrafted,
+        KitchenKnife,
+        DuctTape=2,
+
+        Result:SpearKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Hunting Knife to Spear
+    {
+        SpearCrafted,
+        HuntingKnife,
+        DuctTape=2,
+
+        Result:SpearHuntingKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Machete to Spear
+    {
+        SpearCrafted,
+        Machete,
+        DuctTape=2,
+
+        Result:SpearMachete,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Ice Pick to Spear
+    {
+        SpearCrafted,
+        IcePick,
+        DuctTape=2,
+
+        Result:SpearIcePick,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+        Override:true
+    }
+
+    recipe Attach Bread Knife to Spear
+    {
+        SpearCrafted,
+        BreadKnife,
+        Rope,
+
+        Result:SpearBreadKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Butter Knife to Spear
+    {
+        SpearCrafted,
+        ButterKnife,
+        Rope,
+
+        Result:SpearButterKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Fork to Spear
+    {
+        SpearCrafted,
+        Fork,
+        Rope,
+
+        Result:SpearFork,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Letter Opener to Spear
+    {
+        SpearCrafted,
+        LetterOpener,
+        Rope,
+
+        Result:SpearLetterOpener,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Scalpel to Spear
+    {
+        SpearCrafted,
+        Scalpel,
+        Rope,
+
+        Result:SpearScalpel,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Spoon to Spear
+    {
+        SpearCrafted,
+        Spoon,
+        Rope,
+
+        Result:SpearSpoon,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Scissors to Spear
+    {
+        SpearCrafted,
+        Scissors,
+        Rope,
+
+        Result:SpearScissors,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Hand Fork to Spear
+    {
+        SpearCrafted,
+        HandFork,
+        Rope,
+
+        Result:SpearHandFork,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Screwdriver to Spear
+    {
+        SpearCrafted,
+        Screwdriver,
+        Rope,
+
+        Result:SpearScrewdriver,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Kitchen Knife to Spear
+    {
+        SpearCrafted,
+        KitchenKnife,
+        Rope,
+
+        Result:SpearKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Hunting Knife to Spear
+    {
+        SpearCrafted,
+        HuntingKnife,
+        Rope,
+
+        Result:SpearHuntingKnife,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Machete to Spear
+    {
+        SpearCrafted,
+        Machete,
+        Rope,
+
+        Result:SpearMachete,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+
+    recipe Attach Ice Pick to Spear
+    {
+        SpearCrafted,
+        IcePick,
+        Rope,
+
+        Result:SpearIcePick,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.UpgradeSpear,
+        Category:Survivalist,
+    }
+}
